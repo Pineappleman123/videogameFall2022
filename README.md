@@ -21,3 +21,7 @@ Controls:
 3. d to spawn homing bullets
 4. s to make homing bullets move
 5. space to shoot normal bullets
+
+Notes:
+
+1. you cannot die after the you win screen is displayed
