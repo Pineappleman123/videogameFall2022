@@ -32,9 +32,6 @@ clock = pg.time.Clock()
 
 # loading filepaths for the sprite images
 img_dir1 = path.join(path.dirname(__file__), r'C:\githubstuff\intro_to_programming\videogameFall2022\game\images')
-# img_dir2 = path.join(path.dirname(__file__), r'C:\Users\A.Perevoztchikov25\OneDrive - Bellarmine College Preparatory\Documents\Intro_to_Computer_Programming\SpaceShooterRedux\PNG')
-# img_dir3 = path.join(path.dirname(__file__), r'C:\Users\A.Perevoztchikov25\OneDrive - Bellarmine College Preparatory\Documents\Intro_to_Computer_Programming\SpaceShooterRedux\PNG\Enemies')
-# img_dir4 = path.join(path.dirname(__file__), r'C:\Users\A.Perevoztchikov25\OneDrive - Bellarmine College Preparatory\Documents\Intro_to_Computer_Programming\SpaceShooterRedux\PNG\Lasers')
 
 # function to draw text on the screen
 def draw_text(text, size, color, x, y):
@@ -97,10 +94,7 @@ class Player(Sprite):
                 for i in range(1):
                     self.home()
                     # player_bullets += 1
-        # if keys[pg.K_UP]:
-        #     self.jump()
-        # if keys[pg.K_DOWN]:
-        #     self.acc.y = 5
+        
     # shoot function creates a bullet at player coordinates
     def shoot(self):
         global player_bullets
@@ -273,8 +267,7 @@ class Bullet(Sprite):
             if hits:
                 LIVES -= 1
                 self.kill()
-        # if gameover == True:
-        #     self.kill()
+        # kill bullet after timer ends to conserve memory
         if self.timer >= 150:
             self.kill()
             if self.side == "player":
@@ -323,18 +316,7 @@ class Boss(Sprite):
             enemy_list.remove(self)
             self.kill()
 
-        
-    
-        
 
-            
-        
-        
-        
-        
-
-
-  
 # create a group for all sprites
 all_sprites = pg.sprite.Group()
 players = pg.sprite.Group()
@@ -345,10 +327,7 @@ bosses = pg.sprite.Group()
 # instantiate the player class
 player = Player()
 players.add(player)
-# enemy1 = Enemy(100, 200, RED, 25, 25)
 
-
-# colors = [WHITE, RED, GREEN, BLUE]
 count = 1
 
 # spacing for enemies
@@ -409,15 +388,6 @@ while running:
         all_sprites.add(e)
         enemy_list.append(e)
         bosses.add(e)
-        # print(e)
-    # player.aimbot()
-    # increase firerate based off of score 
-    # if 25 <= SCORE < 75:
-    #     PLAYER_FIRERATE = 7
-    # elif 75 <= SCORE < 120:
-    #     PLAYER_FIRERATE = 5
-    # elif SCORE >= 120:
-    #     PLAYER_FIRERATE = 3
     
     
     ############ Update ##############
@@ -487,9 +457,6 @@ while running:
             player.kill()
             # print("GAME OVER")
             draw_text("GAME OVER", 144, RED, WIDTH / 2, HEIGHT / 2)
-            # gameover = True
-            # SCORE += 1
-            # print("ive hit an enemy")
 
     # buffer - after drawing everything, flip display
     pg.display.flip()
