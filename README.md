@@ -13,3 +13,11 @@ To play:
 
 1. open "game" folder
 2. run "realmain.py" with python
+
+Controls:
+
+1. arrow keys l/r to move
+2. a for aimbot spray
+3. d to spawn homing bullets
+4. s to make homing bullets move
+5. space to shoot normal bullets
