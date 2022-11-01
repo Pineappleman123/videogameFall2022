@@ -86,7 +86,7 @@ class Player(Sprite):
                     # player_bullets += 1
         if keys[pg.K_a]:
             if FRAME % 1 == 0:
-                for i in range(10):
+                for i in range(AIMBOT_DELAY):
                     self.aimbot()
                     # player_bullets += 1
         if keys[pg.K_d]:
