@@ -31,7 +31,7 @@ pg.display.set_caption("Space Invaders by Andrew Perevoztchikov")
 clock = pg.time.Clock()
 
 # loading filepaths for the sprite images
-img_dir1 = path.join(path.dirname(__file__), r'C:\Users\A.Perevoztchikov25\OneDrive - Bellarmine College Preparatory\Documents\Intro_to_Computer_Programming\game\images')
+img_dir1 = path.join(path.dirname(__file__), r'C:\githubstuff\intro_to_programming\videogameFall2022\game\images')
 # img_dir2 = path.join(path.dirname(__file__), r'C:\Users\A.Perevoztchikov25\OneDrive - Bellarmine College Preparatory\Documents\Intro_to_Computer_Programming\SpaceShooterRedux\PNG')
 # img_dir3 = path.join(path.dirname(__file__), r'C:\Users\A.Perevoztchikov25\OneDrive - Bellarmine College Preparatory\Documents\Intro_to_Computer_Programming\SpaceShooterRedux\PNG\Enemies')
 # img_dir4 = path.join(path.dirname(__file__), r'C:\Users\A.Perevoztchikov25\OneDrive - Bellarmine College Preparatory\Documents\Intro_to_Computer_Programming\SpaceShooterRedux\PNG\Lasers')
