@@ -79,6 +79,7 @@ class Player(Sprite):
             # print(self.vel)
         if keys[pg.K_RIGHT]:
             self.acc.x = 2.5
+        # times the bullet shooting
         if keys[pg.K_SPACE]:
             if FRAME % PLAYER_FIRERATE == 0:
                 for i in range(PIERCE):    
